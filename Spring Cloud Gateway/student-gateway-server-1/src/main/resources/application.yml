@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: malesModule
+        uri: http://localhost:2020/
+        predicates:
+        - Path=/males/**
+      - id: femalesModule
+        uri: http://localhost:2021/
+        predicates:
+        - Path=/females/**

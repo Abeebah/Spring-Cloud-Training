@@ -1,0 +1,4 @@
+If If you want to call your properties file from outside your application, put in file and in the same location with you jar file.
+This way, spring boot will automatically use the external properties file to override the existing one 
+
+🅷🅰🅿🅿🆈 🅲🅾🅳🅸🅽🅶

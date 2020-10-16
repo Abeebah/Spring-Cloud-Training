@@ -1,0 +1,64 @@
+SpringCloud Eureka Lecture
+This is a collection of Spring Advanced Class
+
+We are going to create 3 microservices that will communicate with each other with the help of Eureka discovery server:
+
+Application Functionality
+
+1st Microservice – Create Food Vendor, Fetch All Food Vendors
+
+2nd Microservice – Allow Vendor to Add Menu
+
+3rd Microservice – Get’s all available Food Menu’s for the customer
+
+#####################################################################
+
+STEPS IN ADDING EUREKA CLIENT
+
+STEP 1: ADD EUREKA CLIENT DEPENDENCY
+			<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			</dependency>
+
+STEP 2 : Add the client Annotation @EnableEurekaClient
+STEP 3: ASSIGN PORT AND APPLICATION NAME
+server.port=9091
+spring.application.name=food-menu-data-service
+####################################################################
+
+
+
+
+
+
+####################################################################
+STEPS IN ADDING EUREKA SERVER
+
+STEP 1: ADD EUREKA CLIENT DEPENDENCY
+			<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+			</dependency>
+
+STEP 2 : Add the client Annotation @EnableEurekaServer
+
+STEP 3: ASSIGN PORT AND APPLICATION NAME
+spring.application.name=netflix-eureka-naming-server
+server.port=8761
+
+
+STEP 4: Deactivate the Registry to stop the server from registering as a client 
+eureka.client.register-with-eureka=false
+eureka.client.fetch-registry=false
+
+
+###################################################################################
+
+
+
+
+
+
+
+🅷🅰🅿🅿🆈 🅲🅾🅳🅸🅽🅶
